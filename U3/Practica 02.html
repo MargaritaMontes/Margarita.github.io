@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Practica 02</title>
+<script type="text/javascript" src="Programación Web\Margarita.github.io\U3\codigo.js"></script>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<link rel="stylesheet" href="miestilo3.css">
+</head>
+<body onload="alert('Bienvenido!')"></body>
+<body>
+<header id="cabeceralogo">
+<div>
+<h1>Programación Web</h1>
+<h2 style="color:#FFFFFF;">Ing. Sistemas Computacionales</h2>
+</div>
+</header>
+<nav id="menuprincipal">
+<div>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="Practica 01.html">Practica 01</a></li>
+<li><a href="Practica 02.html">Practica 02</a></li>
+<li><a href="Practica 03.html">Practica 03</a></li>
+</ul>
+</div>
+</nav>
+<main>
+<div>
+<section id="articulosprincipales">
+<article>
+<h1>Primer objetivo</h1>
+<time datetime="2022-10-05" pubdate>
+<div class="numerodia">1</div>
+<div class="nombredia">Objeto</div>
+</time>
+<p>Aqui va el código</p><br>
+<script>
+    function calculo(){
+        var operador1 = document.forms[0].operador1.value
+        var operador2 = document.forms[0].operador2.value
+        var resultado = eval(operador1+operador2)
+        document.forms[0].resultado.value = result
+    }
+</script>
+<form>
+    Monto: <input type="Text" name="operando1" /><br />
+    Años <input type="Text" name="operando2" /><br />
+    Resultado: <input type="Text" name="resultado" value="0" size="12" onclick="calcula()">
+    </form>
+
+</article>
+<article>
+<h1>Logo de la mascota del ITQ - Zorros</h1>
+<time datetime="2022-09-30" pubdate>
+<div class="numerodia">30</div>
+<div class="nombredia">Viernes</div>
+</time>
+<p>Zorros ITQ</p>
+<figure>
+<img src="imagenes/IMG_5208.jpg" width="380" height="320">
+</figure>
+</article>
+</section>
+<aside id="infoadicional">
+<h1>Información Personal</h1>
+<p>Dirección: Av. Tecnológico s/n, Centro, 76000 Santiago de Querétaro, Qro.</p>
+<p>Teléfono: 442 227 4400</p>
+<p>Tipo de institución educativa: Universidad pública</p>
+</aside>
+<div class="recuperar"></div>
+</div>
+</main>
+<footer id="pielogo">
+<div>
+<section class="seccionpie">
+<h1>Sitio Web</h1>
+<p><a href="index.html">Principal</a></p>
+<p><a href="fotos.html">Fotos</a></p>
+<p><a href="videos.html">Videos</a></p>
+</section>
+<section class="seccionpie">
+<h1>Ayuda</h1>
+<p><a href="contacto.html">Contacto</a></p>
+</section>
+<section class="seccionpie">
+<address>Querétaro, Qro.</address>
+<small>&copy; Derechos Reservados 2016</small>
+</section>
+<div class="recuperar"></div>
+</div>
+</footer>
+</body>
+</html>
