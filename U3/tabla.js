@@ -1,5 +1,3 @@
-mostrar("lista");
-
 let tareas = [
     {materia:"fisica", detalles:"Hacer lab fisica", fecha:new Date(2020, 4, 25)},
     {materia:"mate", detalles:"Hacer lab fisica", fecha:new Date(2020, 4, 25)},
