@@ -34,17 +34,31 @@
     function calcula(){
         var operando1 = document.forms[0].operando1.value
         var operando2 = document.forms[0].operando2.value
-        var operador = document.forms[0].operador.value
-        var result = eval(operando1 + operador + operando2)
+        var result = eval(operando1 + operando2)
         document.forms[0].resultado.value = result
     }
 </script>
 <form>
-    Operador 1: <input type="Text" name="operando1" /><br />
-    Operador: <input type="Text" name="operador" /><br />
-    Operando 2 <input type="Text" name="operando2" /><br />
-    Resultado: <input type="Text" name="resultado" value="0" size="12" onclick="calcula()">
-    </form>
+    Monto: <input type="Text" name="operando1" /><br />
+    Años: <input type="Text" name="operando2" /><br />
+    Tabla: <input type="Text" name="resultado" value="0" size="12" onclick="calcula()">
+
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+
+
+
+</form>
+
+
 
 </article>
 </section>
