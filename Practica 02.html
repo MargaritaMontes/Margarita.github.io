@@ -34,46 +34,31 @@
 <h2>Depreciación de un Automovil</h2>
 
 <script language="javascript" type="text/javascript">
-    function calcula(){
-        var operando1 = document.forms[0].operando1.value
-        var operando2 = document.forms[0].operando2.value
+    function calcula()
+    {
+        var costo = document.forms[0].costo.value
+        var anio = document.forms[0].anio.value
     }
 </script>
 
 <form>
-    Monto: <input type="Text" name="operando1" /><br />
-    Años: <input type="Text" name="operando2" /><br />
+    Monto: <input type="Text" name="costo" /><br />
+    Años: <input type="Text" name="anio" /><br />
 </form>
 
 <script>
     function algoritmo()
     {
-        let costo, depreciacion;
-        depreciacion=costo*(5-i)/10;
-        document.formulario1.depreciacion.value = depreciacion;
+        let costo, depreciacion, anio;
+        depreciacion=((anio-i)/15)*costo;
+        document.formulario.depreciacion.value = depreciacion;
     }
 </script>
 
 <form name="formulario">
 <table aling="center" cellspacing="2" cellspacing="4" width="500" height="50">
     <tbody>
-    <tr align="center">
-        <td colspan="2" rowspan="1">
-            <th style="background-color:#0077ff">Año</th>
 
-            <input value="Procesar" type="button" onclick="algoritmo();" />
-            <input type="reset" />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <label for="depreciacion">Valor de depreciacion:</label>
-        </td>
-        <td>
-            <input name="depreciacion" step="0.000001" type="number" />
-        </td>
-    </tr>
     </tbody>
 </table>
 </form>
