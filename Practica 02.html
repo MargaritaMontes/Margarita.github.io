@@ -43,26 +43,36 @@
 </script>
 
 <form name="formulario">
+    Monto: <input type="Text" name="costo" /><br />
+    Años: <input type="Text" name="anio" /><br />
     <table style="text-align: left; margin-left: auto; margin-right: auto;">
-        <tbody>
+        <table aling="center" cellspacing="2" cellspacing="4" width="500" height="500">
             <tr align="center">
-                <td colspan="1" rowspan="1">
-                    Monto: <input type="Text" name="costo" /><br />
-                    Años: <input type="Text" name="anio" /><br />
-                <input value="Procesar" type="button" onclick="calcula();"/>
-                <input type="reset"/>
+                <th style="background-color:#01804d">Año</th>
+                <th style="background-color:#01804d">Monto</th>
+                <input value="Calculo" type="button" onclick="calcula();"/>
                 </td>
             </tr>
-            
             <tr>
                 <td>
-                <label for="depreciacion">Valor de depreciacion:</label>
-                </td>
-                <td>
-                <input name="depreciacion" type="number" />
+                    <label for="depreciacion">Valor de depreciacion:</label>
+                    <input name="depreciacion" type="number" />
                 </td>
             </tr>
-        </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </table>
 </form>
 
