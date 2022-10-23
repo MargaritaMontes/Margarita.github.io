@@ -38,6 +38,10 @@
     {
         var costo = document.forms[0].costo.value
         var anio = document.forms[0].anio.value
+
+        let costo, depreciacion, anio;
+        depreciacion=((anio-i)/15)*costo;
+        document.formulario.depreciacion.value = depreciacion;
     }
 </script>
 
@@ -46,21 +50,12 @@
     Años: <input type="Text" name="anio" /><br />
 </form>
 
-<script>
-    function algoritmo()
-    {
-        let costo, depreciacion, anio;
-        depreciacion=((anio-i)/15)*costo;
-        document.formulario.depreciacion.value = depreciacion;
-    }
-</script>
-
 <form name="formulario">
     <table style="text-align: left; margin-left: auto; margin-right: auto;">
         <tbody>
             <tr align="center">
-                <td colspan="5" rowspan="5">
-                <input value="Procesar" type="button" onclick="algoritmo();"/>
+                <td colspan="1" rowspan="1">
+                <input value="Procesar" type="button" onclick="calcula();"/>
                 <input type="reset"/>
                 </td>
             </tr>
