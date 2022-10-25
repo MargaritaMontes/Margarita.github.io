@@ -1,93 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<title>Practica 02</title>
-<script type="text/javascript" src="Programación Web\MargaritaMontes.github.io\U3\codigo.js"></script>
-<meta charset="utf-8">
-<meta name="description" content="Este es un documento HTML5">
-<meta name="keywords" content="HTML, CSS, JavaScript">
-<link rel="stylesheet" href="miestilo3.css">
+    <title>Practica 02</title>
+    <script type="text/javascript" src="Programación Web\MargaritaMontes.github.io\U3\codigo.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento HTML5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="stylesheet" href="miestilo3.css">
 </head>
+
 <body>
-<header id="cabeceralogo">
-<div>
-<h1>Programación Web</h1>
-<h2 style="color:#FFFFFF;">Ing. Sistemas Computacionales</h2>
-</div>
-</header>
-<nav id="menuprincipal">
-<div>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="Practica 01.html">Practica 01</a></li>
-<li><a href="Practica 02.html">Practica 02</a></li>
-<li><a href="Practica 03.html">Practica 03</a></li>
-</ul>
-</div>
-</nav>
-<main>
-<div>
-<section id="articulosprincipales">
-<article>
+    <header id="cabeceralogo">
+        <div>
+            <h1>Programación Web</h1>
+            <h2 style="color:#FFFFFF;">Ing. Sistemas Computacionales</h2>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Practica 01.html">Practica 01</a></li>
+                <li><a href="Practica 02.html">Practica 02</a></li>
+                <li><a href="Practica 03.html">Practica 03</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <section id="articulosprincipales">
+                <article>
 
-<h1>Práctica 02</h1>
-<h2>Depreciación de un Automovil</h2>
+                    <h1>Practica 02</h1>
+                    <h2>Depreciación de un Automovil</h2>
 
-<script language="javascript" type="text/javascript">
-    function calcula()
-    {
-        let costo, depreciacion, anio;
-        depreciacion=((anio-i)/15)*costo;
-        document.formulario.depreciacion.value = depreciacion;
-    }
-</script>
+                    <script language="javascript" type="text/javascript">
+                        function calcula() {
+                            let costo, depreciacion, anio;
+                            anio = parseInt(document.getElementById("anio").value);
+                            costo = parseInt(document.getElementById("costo").value);
 
-<form name="formulario">
-    Monto: <input type="Text" name="costo"/></br>
-    Años: <input type="Text" name="anio"/></br>
-    <table aling="center" colspan="7" rowspan="3" width="150" height="150">
-            <tr align="center">
-                <th style="background-color:#01804d">Año</th>
-                <th style="background-color:#01804d">Monto</th>
-                </td>
-            </tr>
-            <tr align="center">
-                <td>
-                    <input value="Calcular" type="button" onclick="calcula();"/>
-                </td> 
-            </tr>
-    </table>
-</form>
+                            var html = '<table aling="center" colspan="7" rowspan="3" width="150" height="150"> <tr align="center"> <th style="background-color:#01804d">Año</th>\n <th style="background-color:#01804d">Monto</th>\n</tr>\n<tr align="center">\n';
+                            const n = anio*(anio + 1)/2;
+                            for (let i = 0; i < anio; i++) {
+                                depreciacion = ((anio - i) / n) * costo;
+                                html+=`<tr>\n<td>${i+1}</td>\n<td>${depreciacion}</td>\n</tr>\n`;
+                            }
+                            html += '</tr>\n</table>\n';
+                            document.getElementById("resultado").innerHTML=html;
+                        }
+                    </script>
 
-</article>
-</section>
-<aside id="infoadicional">
-<h1>Información Personal</h1>
-<p>Dirección: Av. Tecnológico s/n, Centro, 76000 Santiago de Querétaro, Qro.</p>
-<p>Teléfono: 442 227 4400</p>
-<p>Tipo de institución educativa: Universidad pública</p>
-</aside>
-<div class="recuperar"></div>
-</div>
-</main>
-<footer id="pielogo">
-<div>
-<section class="seccionpie">
-<h1>Sitio Web</h1>
-<p><a href="index.html">Principal</a></p>
-<p><a href="fotos.html">Fotos</a></p>
-<p><a href="videos.html">Videos</a></p>
-</section>
-<section class="seccionpie">
-<h1>Ayuda</h1>
-<p><a href="contacto.html">Contacto</a></p>
-</section>
-<section class="seccionpie">
-<address>Querétaro, Qro.</address>
-<small>&copy; Derechos Reservados 2016</small>
-</section>
-<div class="recuperar"></div>
-</div>
-</footer>
+                    <form name="formulario">
+                        Monto: <input type="Text" name="costo" id="costo"/></br>
+                        Años: <input type="Text" name="anio" id="anio" /></br>
+                        <input value="Calcular" type="button" onclick="calcula();" />
+                        <div id="resultado"></div> 
+                    </form>
+
+                </article>
+            </section>
+            <aside id="infoadicional">
+                <h1>Información Personal</h1>
+                <p>Dirección: Av. Tecnológico s/n, Centro, 76000 Santiago de Querétaro, Qro.</p>
+                <p>Teléfono: 442 227 4400</p>
+                <p>Tipo de institución educativa: Universidad pública</p>
+            </aside>
+            <div class="recuperar"></div>
+        </div>
+    </main>
+    <footer id="pielogo">
+        <div>
+            <section class="seccionpie">
+                <h1>Sitio Web</h1>
+                <p><a href="index.html">Principal</a></p>
+                <p><a href="fotos.html">Fotos</a></p>
+                <p><a href="videos.html">Videos</a></p>
+            </section>
+            <section class="seccionpie">
+                <h1>Ayuda</h1>
+                <p><a href="contacto.html">Contacto</a></p>
+            </section>
+            <section class="seccionpie">
+                <address>Querétaro, Qro.</address>
+                <small>&copy; Derechos Reservados 2016</small>
+            </section>
+            <div class="recuperar"></div>
+        </div>
+    </footer>
 </body>
+
 </html>
