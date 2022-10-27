@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-    <title>Practica 02</title>
-    <script type="text/javascript" src="Programación Web\MargaritaMontes.github.io\U3\codigo.js"></script>
+    <title>Pascal</title>
+    <script type="text/javascript" src="Programación Web\MargaritaMontes.github.io\U3"></script>
     <meta charset="utf-8">
     <meta name="description" content="Este es un documento HTML5">
     <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -32,40 +32,34 @@
             <section id="articulosprincipales">
                 <article>
 
-                    <h1>Practica 02</h1>
-                    <h2>Depreciación de un Automovil</h2>
+                    <h1>Practica 03</h1>
+                    <h2>Triángulo de Pascal</h2>
 
                     <script language="javascript" type="text/javascript">
-                        function calcula() {
-                            let costo, depreciacion, anio;
-                            anio = parseInt(document.getElementById("anio").value);
-                            costo = parseInt(document.getElementById("costo").value);
-
-                            var html = '<table aling="center" colspan="7" rowspan="3" width="150" height="150"> <tr align="center"> <th style="background-color:#01804d">Año</th>\n <th style="background-color:#01804d">Monto</th>\n</tr>\n<tr align="center">\n';
-                            const n = anio*(anio + 1)/2;
-                            for (let i = 0; i < anio; i++) {
-                                depreciacion = ((anio - i) / n) * costo;
-                                html+=`<tr>\n<td>${i+1}</td>\n<td>${depreciacion}</td>\n</tr>\n`;
+                        function triangulo(n){
+                            resultado=[[1],[1,1]];
+                            for (let l=3; l<=n; l++)
+                            {
+                                resultado.push(
+                                    [...Array(1)].map((el, i, a) =>
+                                    i==0 || i==a.length-1 ? 1: resultado[l-2][i-1]+resultado[l-2][i]
+                                    )
+                                );
                             }
-                            html += '</tr>\n</table>\n';
-                            document.getElementById("resultado").innerHTML=html;
+                            return resultado;
                         }
+                        
                     </script>
 
-                    <form name="formulario">
-                        Monto: <input type="Text" name="costo" id="costo"/></br>
-                        Años: <input type="Text" name="anio" id="anio" /></br>
-                        <input value="Calcular" type="button" onclick="calcula();" />
-                        <div id="resultado"></div> 
-                    </form>
+                    
 
                 </article>
             </section>
             <aside id="infoadicional">
                 <h1>Información Personal</h1>
-                <p>Dirección: Av. Tecnológico s/n, Centro, 76000 Santiago de Querétaro, Qro.</p>
-                <p>Teléfono: 442 227 4400</p>
-                <p>Tipo de institución educativa: Universidad pública</p>
+                <p>Margarita Patricia Montes Contreras</p>
+                <p>Celular: 442 503 2957</p>
+                <p></p>
             </aside>
             <div class="recuperar"></div>
         </div>
