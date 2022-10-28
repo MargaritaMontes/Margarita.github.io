@@ -36,19 +36,28 @@
                     <h2>Triángulo de Pascal</h2>
 
                     <script language="javascript" type="text/javascript">
-                        function pascal(n) {
-                            if (n==0) return [1];
-                            else
-                            var old = pascal(n-1);
-                            var newA = [];
-                            for (var i=0; i<old.length-1; i++)
-                            newA.push(old[i]+old[i+1]);
-                            return [1].concat(newA).concat([1]);
-                        }
-                        for (var i=0; i<13; i++)
-                        console.log(pascal(i));
-                    </script>
+                        var limite = prompt("¿Reglones a mostrar?");
+                        var matriz = new array();
+                        matriz[0] = new array(1);
+                        matriz[0][0] = 1;
+                        matriz[1] = new array(2);
+                        matriz[1][0] = 1;
+                        matriz[1][1] = 1;
+                        for(var n = 2; n < limite; n++){
+                            matriz[n] = new array(matriz[n-1].length + 1);
+                            matriz[n][0] = 1;
+                            matriz[n][matriz[n].length -1] - 1;
 
+                            for(var i = 1; i < matriz[n].length -1; i++){
+                                matriz[n][i] = matriz[n-1][i-1]+matriz[n-1][i];
+                            }
+                        }
+                        for(var n = 0; n < limite; n++){
+                            for(var i = 0; i < matriz[n].length; i++){
+                                document.write(matriz[n][i] + " ")
+                            }
+                        }
+                    </script>
                 </article>
             </section>
             <aside id="infoadicional">
