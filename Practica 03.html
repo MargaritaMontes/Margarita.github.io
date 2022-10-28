@@ -35,21 +35,21 @@
                     <h1>Practica 03</h1>
                     <h2>Triángulo de Pascal</h2>
 
-                    <script language="javascript" type="text/javascript">
+                    <script type="text/javascript">
                         var limite = prompt("¿Reglones a mostrar?");
-                        var matriz = new array();
-                        matriz[0] = new array(1);
+                        var matriz = new Array();
+                        matriz[0] = new Array(1);
                         matriz[0][0] = 1;
-                        matriz[1] = new array(2);
+                        matriz[1] = new Array(2);
                         matriz[1][0] = 1;
                         matriz[1][1] = 1;
                         for(var n = 2; n < limite; n++){
-                            matriz[n] = new array(matriz[n-1].length + 1);
+                            matriz[n] = new Array(matriz[n - 1].length + 1);
                             matriz[n][0] = 1;
-                            matriz[n][matriz[n].length -1] - 1;
+                            matriz[n][matriz[n].length - 1] - 1;
 
                             for(var i = 1; i < matriz[n].length -1; i++){
-                                matriz[n][i] = matriz[n-1][i-1]+matriz[n-1][i];
+                                matriz[n][i] = matriz[n - 1][i - 1]+matriz[n - 1][i];
                             }
                         }
                         for(var n = 0; n < limite; n++){
