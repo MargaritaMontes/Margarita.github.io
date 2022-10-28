@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <title>Pascal</title>
+    <title>Moneda</title>
     <script type="text/javascript" src="Programación Web\MargaritaMontes.github.io\U3"></script>
     <meta charset="utf-8">
     <meta name="description" content="Este es un documento HTML5">
@@ -33,10 +32,11 @@
             <section id="articulosprincipales">
                 <article>
                     <h1>Practica 04</h1>
-                    <h2>Convertir número a leyenda monetaria</h2>  
+                    <h2>Convertir numero a leyenda monetaria</h2>  
                     <script>
-                        var letras = (function() {
-                            function unidades(num) {
+
+                        function unidades(num) {
+
                                 switch (num) {
                                 case 1:
                                     return 'uno';
@@ -59,13 +59,7 @@
                                 }
                                 return '';
                             }
-                            
-                    </script>
-
-                    <form name="formulario">
-                        Cantidad: <input type="Text" name="num" id="num"/></br>
-                    </form>
-                    
+                    </script>                    
                 </article>
             </section>
             <aside id="infoadicional">
@@ -97,5 +91,4 @@
         </div>
     </footer>
 </body>
-
 </html>
