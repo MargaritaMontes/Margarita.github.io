@@ -33,33 +33,14 @@
                 <article>
                     <h1>Practica 04</h1>
                     <h2>Conversiones</h2> 
-                    <script>
-
-                        function unidades(num) {
-
-                                switch (num) {
-                                case 1:
-                                    return 'uno';
-                                case 2:
-                                    return 'dos';
-                                case 3:
-                                    return 'tres';
-                                case 4:
-                                    return 'cuatro';
-                                case 5:
-                                    return 'cinco';
-                                case 6:
-                                    return 'seis';
-                                case 7:
-                                    return 'siete';
-                                case 8:
-                                    return 'ocho';
-                                case 9:
-                                    return 'nueve';
-                                }
-                                return '';
-                            }
-                    </script>                    
+                    <form class="form" action="#" onsubmit="event.preventDefault();">
+                    <label for="field-number">Ingrese un numero:</label>
+                    <input type="text" id='field-number' autocomplete="off">
+                    <p id="message"></p>
+                    </form>
+                    </div>
+                <script type="text/javascript" src="./js/app.js">
+                </script>                   
                 </article>
             </section>
             <aside id="infoadicional">
