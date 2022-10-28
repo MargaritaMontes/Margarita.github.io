@@ -36,8 +36,9 @@
                     <h2>Triángulo de Pascal</h2>
 
                     <script type="text/javascript">
-                        var limite = prompt("¿Reglones a mostrar?");
+                        var limite = prompt("Reglones a mostrar");
                         var matriz = new Array();
+                        
                         matriz[0] = new Array(1);
                         matriz[0][0] = 1;
                         matriz[1] = new Array(2);
@@ -46,7 +47,7 @@
                         for(var n = 2; n < limite; n++){
                             matriz[n] = new Array(matriz[n - 1].length + 1);
                             matriz[n][0] = 1;
-                            matriz[n][matriz[n].length - 1] - 1;
+                            matriz[n][matriz[n].length - 1] = 1;
 
                             for(var i = 1; i < matriz[n].length -1; i++){
                                 matriz[n][i] = matriz[n - 1][i - 1]+matriz[n - 1][i];
